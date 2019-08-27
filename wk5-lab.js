@@ -16,7 +16,6 @@ let viewsPath = __dirname+'/views/';
 /* 
           GET Requests
   */
-
 app.get('/', function(req,res){    
     res.sendFile(viewsPath+"index.html");
 });
@@ -24,18 +23,19 @@ app.get('/', function(req,res){
 app.get('/addNewtask', function(req,res){    
     res.sendFile(viewsPath+"addNew.html");
 });
+/* 
+          POST Requests
+  */
+ app.post('/newTask', function(req,res){
+    db.push(req.body);
+    res.sendFile(viewsPath+"addNew.html");
+});
 
 app.get('/listAll', function(req,res){    
     res.render(viewsPath + "listAllTasks.html",{
         tasks: db
     });
-/* 
-          POST Requests
-  */
-app.post('/newTask', function(req,res){
-    db.push(req.body);
-    res.sendFile(viewsPath+"addNew.html");
-});
+
 
 });
 

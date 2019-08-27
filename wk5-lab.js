@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 let db = [];
-app.engine("html", require('ejs'.renderFile));
+app.engine("html", require('ejs').renderFile);
 app.set("viewengine");
 
 let bodyParser = require('body-parser');

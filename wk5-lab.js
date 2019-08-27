@@ -24,7 +24,7 @@ app.post('/newTask', function(req,res){
 })
 
 app.get('/listAll', function(req,res){    
-    res.render(viewsPath+"listAllTasks.html",{
+    res.render(viewsPath + "listAllTasks.html",{
         tasks: db
     });
 });

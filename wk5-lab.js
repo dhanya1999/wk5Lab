@@ -6,6 +6,7 @@ app.set("viewengine");
 
 let bodyParser = require('body-parser');
 
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.static('images'));
 let viewsPath = __dirname+'/views/';

@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static('images'));
+app.use(express.static('css'));
 let viewsPath = __dirname+'/views/';
 
 /* 

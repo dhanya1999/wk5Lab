@@ -32,6 +32,8 @@ app.get('/addNewtask', function(req,res){
     res.sendFile(viewsPath+"addNew.html");
 });
 
+// uses the rendering enqine to pass dynamically
+//returns the rendered HTML
 app.get('/listAll', function(req,res){    
     res.render(viewsPath + "listAllTasks.html",{
         tasks: db

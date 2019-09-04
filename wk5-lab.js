@@ -24,6 +24,7 @@ app.get('/', function(req,res){
 app.get('/addNewtask', function(req,res){    
     res.sendFile(viewsPath+"addNew.html");
 });
+
 /* 
           POST Requests
   */
